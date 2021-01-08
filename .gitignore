@@ -1,0 +1,5 @@
+.vscode/*
+.ishell_history
+test/logs/*
+*.cache
+*.lock
