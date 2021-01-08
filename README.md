@@ -1,10 +1,10 @@
 
 ## AIB Farm Frontend 
 
-> git clone https://github.com/iobond/aibfarm-frontend.git
-> cd aibfarm-frontend
-> yarn
-> PORT=8099 yarn start
+$ git clone https://github.com/iobond/aibfarm-frontend.git
+$ cd aibfarm-frontend
+$ yarn
+$ PORT=8099 yarn start
 
 in your browser http://x.x.x.x:8099/
 
