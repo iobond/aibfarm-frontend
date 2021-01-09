@@ -33,10 +33,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI= GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && cp ./build/index.html ./build/200.html && surge ./build sushiswap.org"
+    "deploy": "yarn build && cp ./build/index.html ./build/200.html && surge ./build sushiswap.org",
+    "postbuild": "react-snap"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -57,7 +58,8 @@
     "@types/numeral": "0.0.28",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
-    "@types/styled-components": "^5.1.2"
+    "@types/styled-components": "^5.1.2",
+    "react-snap": "^1.23.0"
   },
   "prettier": {
     "trailingComma": "all",

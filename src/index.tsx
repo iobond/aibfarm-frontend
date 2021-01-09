@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { hydrate, render } from "react-dom";
 import App from './App'
 import './index.css'
 import './i18n/i18n'
@@ -14,11 +14,13 @@ function getLibrary(provider: any): Web3Provider {
   return library
 }
 
-ReactDOM.render(
-  // <React.StrictMode>
-    <Web3ReactProvider getLibrary={getLibrary}>
+const rootElement = document.getElementById("root");
+if (rootElement.hasChildNodes()) {
+  hydrate(<Web3ReactProvider getLibrary={getLibrary}>
     <App />
-    </Web3ReactProvider>,
-  // </React.StrictMode>,
-  document.getElementById('root'),
-)
+    </Web3ReactProvider>, rootElement);
+} else {
+  render(<Web3ReactProvider getLibrary={getLibrary}>
+    <App />
+    </Web3ReactProvider>, rootElement);
+}

@@ -3,3 +3,4 @@
 test/logs/*
 *.cache
 *.lock
+node_modules
